@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+   <!--
+   1准备画纸 canvas默认300*150白色
+   2准备绘制工具
+   3利用工具绘图
+   -->
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var myCanvas=document.querySelector('canvas');
+
+    var ctx=myCanvas.getContext('2d');
+
+    ctx.moveTo(100,100);
+
+    ctx.lineTo(200,100);
+
+    ctx.stroke();
+
+</script>
+</body>
+</html>

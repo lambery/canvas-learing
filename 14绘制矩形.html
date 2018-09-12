@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+    var myCanvas=document.querySelector('canvas');
+    var ctx=myCanvas.getContext('2d');
+
+//    ctx.rect(100,100,200,100);//rect(x,y,w,h)
+//
+//    ctx.stroke();
+
+     ctx.strokeRect(100,100,200,100);//有独立路径，不影响别的绘制
+
+     ctx.fillRect(0,0,50,50);
+
+    ctx.clearRect(0,0,20,20);//擦除
+
+
+
+</script>
+</body>
+</html>
