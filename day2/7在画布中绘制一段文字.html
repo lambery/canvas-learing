@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+    var myCanvas=document.querySelector('canvas');
+    var ctx=myCanvas.getContext('2d');
+
+    var w=ctx.canvas.width;
+    var h=ctx.canvas.height;
+
+    var str='hello world';
+
+    ctx.beginPath();
+    ctx.moveTo(0,h/2-0.5);
+    ctx.lineTo(w,h/2-0.5);
+    ctx.moveTo(w/2-0.5,0);
+    ctx.lineTo(w/2-0.5,h);
+    ctx.strokeStyle='#eee';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle='#000';
+    ctx.font='40px Microsoft YaHei';
+    //基点是起始坐标
+    ctx.textAlign='center';
+    ctx.textBaseline='middle';
+    //ctx.strokeText(str,w/2,h/2);
+    ctx.fillText(str,w/2,h/2);
+
+    ctx.beginPath();
+    var width2=ctx.measureText(str).width;
+    ctx.moveTo(w/2-width2/2,h/2+20);
+    ctx.lineTo(w/2+width2/2,h/2+20);
+    ctx.stroke();
+
+
+
+</script>
+</body>
+</html>
