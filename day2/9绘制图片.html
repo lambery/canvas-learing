@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<canvas width="600" height="400"></canvas>
+<script>
+    var myCanvas=document.querySelector('canvas');
+    var ctx=myCanvas.getContext('2d');
+
+//    var img=document.createElement('img');
+//    img.src='image/01.jpg';
+
+    var image=new Image();
+
+    image.onload=function () {
+
+        console.log(image);
+
+        //ctx.drawImage(image,100,100);
+
+
+
+
+        //ctx.drawImage(image,100,100,100,250)
+        // 五个参数drawImage(img,x,y,w,h)
+        //x,y 图片绘制的左上角
+        //w,h 图片绘制尺寸设置(图片缩放，不是截取)
+
+
+
+
+
+
+
+        //九个参数drawImage(img,x,y,w,h,x1,y1,w1,h1)
+        //图片上定位的坐标 x y
+        //在图片上截取多大的区域 w h
+        //x1,y1,w1,h1 画布中的一个矩形区域,同上5个参数的后4个
+        ctx.drawImage(image,400,400,400,400,100,100,200,200)
+    };
+
+    image.src='image/02.jpg';
+
+</script>
+</body>
+</html>
